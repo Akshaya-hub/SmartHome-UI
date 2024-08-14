@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white">
+
+<!-- Greeting and Welcome Text -->
+<TextView
+    android:id="@+id/greeting_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="Hello Akshaya 👋"
+    android:textSize="18sp"
+    android:textColor="@color/black" />
+
+<TextView
+    android:id="@+id/welcome_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/greeting_text"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp"
+    android:text="Welcome to Smart home"
+    android:textSize="14sp"
+    android:textColor="@color/gray" />
+
+<!-- Rooms Section -->
+<TextView
+    android:id="@+id/rooms_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/welcome_text"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:text="Rooms"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/black" />
+
+<LinearLayout
+    android:id="@+id/rooms_section"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rooms_label"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:src="@drawable/room_icon_1"
+        android:contentDescription="Bedroom" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:src="@drawable/room_icon_2"
+        android:contentDescription="Living Room" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:src="@drawable/room_icon_3"
+        android:contentDescription="Balcony" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:src="@drawable/add_icon"
+        android:contentDescription="Add Room" />
+</LinearLayout>
+
+<!-- Devices Section -->
+<TextView
+    android:id="@+id/devices_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rooms_section"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:text="Devices"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/black" />
+
+<GridLayout
+    android:id="@+id/devices_section"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/devices_label"
+    android:layout_marginTop="8dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:columnCount="2">
+
+    <!-- Device 1: Air Conditioner -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/device_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air Conditioner"
+            android:textColor="@color/brown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22°C"
+            android:textSize="24sp"
+            android:textColor="@color/brown" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- Device 2: Fan -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/device_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x2 speed"
+            android:textSize="24sp"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- Device 3: Desk Lamp -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/device_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desk Lamp"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- Add Device Button -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/device_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_icon"
+            android:contentDescription="Add Device"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</GridLayout>
+
+<!-- Bottom Navigation Bar -->
+<LinearLayout
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:background="@color/light_brown">
+
+    <ImageView
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/profile_icon"
+        android:contentDescription="Profile" />
+
+    <ImageView
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/home_icon"
+        android:contentDescription="Home" />
+
+    <ImageView
+        android:id="@+id/nav_settings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/settings_icon"
+        android:contentDescription="Settings" />
+</LinearLayout>

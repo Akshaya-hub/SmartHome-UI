@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">project1</string>
-    <string name="Text_View">Student details</string>
-    <string name="text_view">Student details 1</string>
+    <string name="text_view">Login</string>
+    <string name="text1"> Name</string>
+    <string name="text2"> Enter Email address</string>
+    <string name="text3"> Enter Password</string>
 </resources>
